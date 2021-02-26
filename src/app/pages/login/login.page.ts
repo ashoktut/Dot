@@ -13,6 +13,11 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  gotoDash(){
+
+    this.router.navigateByUrl('home');
+
+  }
   gotoSignup() {
 
     this.router.navigateByUrl('signup');

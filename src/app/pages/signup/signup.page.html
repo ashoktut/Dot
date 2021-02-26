@@ -4,6 +4,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <div class="title">
+    <p class="regTitle">Register with DotHub to get started</p>
+  </div>
+
+  <ion-list>
+     
+    <ion-item>
+      <ion-label position = "stacked">Full Name</ion-label>
+      <ion-input placeholder="Full Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position = "stacked">Email</ion-label>
+      <ion-input placeholder = "Email"></ion-input>   
+    </ion-item>
+
+    <ion-item>
+      <ion-label position = "stacked">Password</ion-label>
+      <ion-input placeholder = "password"></ion-input>
+    </ion-item>
+    
+    <p class="regTitle">By signing up you're agreed to our Terms & Conditions</p>
+
+    <ion-button (click)="login()" expand ="block" shape ='round' color ='success'>Register</ion-button>
+    
+    <p class = "member"><a (click)= "gotoLogin()">Already a member? Login here</a></p>
+  </ion-list>
 
 </ion-content>
