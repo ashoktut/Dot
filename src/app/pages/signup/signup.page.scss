@@ -1,23 +1,69 @@
-.title {
-    margin-bottom: 30px;
+// .title {
+//     margin-bottom: 30px;
+// }
+
+// .title h4 {
+//     color: var(--ion-color-primary);
+// }
+
+// .title p {
+//     margin-top: 0 !important;
+//     color: #999999;
+//     font-size: small;
+// }
+
+// p {
+//     font-size: small;
+//     color: #999999;
+//     text-align: center;
+// }
+
+// .member{
+//     text-align: center;
+// }
+.container-title {
+    padding: 10px;
+    h3 {
+      font-size: 34px;
+      color: #1c3f80;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  .container-form{
+
+    .btnSignup{
+        color: brown;
+    }
+
 }
 
-.title h4 {
-    color: var(--ion-color-primary);
-}
-
-.title p {
-    margin-top: 0 !important;
-    color: #999999;
-    font-size: small;
-}
-
-p {
-    font-size: small;
-    color: #999999;
-    text-align: center;
-}
-
-.member{
-    text-align: center;
-}
+  .content-forgot-password {
+    padding: 4px;
+    position: relative;
+  
+    span {
+      font-size: 14px;
+      color: #1c3f80;
+      text-align: right;
+      position: absolute;
+      right: 8px;
+      top: 25px;
+      z-index: 1;
+    }
+  }
+  .container-sign-up {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    .title-footer-general p {
+      font-size: 16px;
+      color: #1c3f80;
+      text-align: center;
+  
+      span {
+        font-weight: 700;
+      }
+    }
+  }

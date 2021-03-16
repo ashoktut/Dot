@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
 
   gotoDash(){
 
-    this.router.navigateByUrl('home');
+    this.router.navigateByUrl('shops-list');
 
   }
   gotoSignup() {

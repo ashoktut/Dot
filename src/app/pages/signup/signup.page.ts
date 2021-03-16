@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,8 @@ export class SignupPage implements OnInit {
 
   constructor(
     public modalCtrl: ModalController,
-    private router: Router
+    private router: Router,
+    public alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -28,4 +29,17 @@ export class SignupPage implements OnInit {
   async dismiss() {
     return await this.modalCtrl.dismiss();
   }
+
+  async register() {
+    const alert = await this.alertController.create({
+      header: 'Congratulations!',
+      message: 'Your account has been created successfully',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+    this.router.navigateByUrl('login');
+
+  }
+
 }

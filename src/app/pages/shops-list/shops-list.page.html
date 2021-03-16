@@ -1,0 +1,127 @@
+
+<ion-header no-header>
+  <ion-toolbar color = "grub">
+    <ion-segment mod = "md" [(ngModel)]="segment" (ionChange)="segmentChanged($event)" color="light">
+      <ion-segment-button value = "0">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        Hair Salon
+      </ion-segment-button>
+
+      <ion-segment-button value = "1">
+        <ion-icon name="fast-food-outline"></ion-icon>
+        Food
+      </ion-segment-button>
+
+      <ion-segment-button value = "2">
+        <ion-icon name="people-outline"></ion-icon>
+        Accessories
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="dark">
+  <ion-slides #slides pager = "false" [options]="sliderOptions" (ionSlidesDidChange)="slideChanged(slides)" (ionSlidesDidLoad)="slideChanged(slides)">
+    <ion-slide>
+        <div class = "cards">
+          <ion-card>
+            <ion-card-header>
+              Restaurants most ordered from:
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #barCanvas></canvas>
+            </ion-card-content>
+          </ion-card>
+      
+          <ion-card>
+            <ion-card-header>
+              Most ordered food menu
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #doughnutCanvas></canvas>
+            </ion-card-content>
+          </ion-card>
+      
+          <ion-card>
+            <ion-card-header>
+              Number of Users
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #lineCanvas></canvas>
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <div class = "cards">
+        <ion-card (click)="gotoRest1()">
+          <ion-card-header>
+            Restaurants most ordered from:
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #barCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card (click)="gotoRest2()"> 
+          <ion-card-header>
+            Most ordered food menu
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #doughnutCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card (click)="gotoRest3()">
+          <ion-card-header>
+            Number of Users
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #lineCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <div class = "cards">
+        <ion-card>
+          <ion-card-header>
+            Restaurants most ordered from:
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #barCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card>
+          <ion-card-header>
+            Most ordered food menu
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #doughnutCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+    
+        <ion-card>
+          <ion-card-header>
+            Number of Users
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #lineCanvas></canvas>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
