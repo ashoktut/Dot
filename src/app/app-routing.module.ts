@@ -13,10 +13,19 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'cart',
     loadChildren: () => import('./pages/cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path: 'shops-list',
+    loadChildren: () => import('./pages/shops-list/shops-list.module').then( m => m.ShopsListPageModule)
+  },  {
+    path: 'rest1',
+    loadChildren: () => import('./pages/restaurants/lebs-maps/rest1/rest1.module').then( m => m.Rest1PageModule)
   }
+
 
 ];
 @NgModule({

@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<!-- <ion-content class="ion-padding">
   <div class="title">
     <p class="regTitle">Register with DotHub to get started</p>
   </div>
@@ -33,4 +33,38 @@
     <p class = "member"><a (click)= "gotoLogin()">Already a member? Login here</a></p>
   </ion-list>
 
+</ion-content> -->
+
+<ion-content>
+  <div class="container-title">
+    <h3>Create an account free!</h3>
+  </div>
+  <div class="container-form">
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input placeholder="********"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Confirm Password</ion-label>
+      <ion-input placeholder="********"></ion-input>
+    </ion-item>
+    <ion-button class ="btnSignup" expand="full" (click)="register()">Sign Up</ion-button>
+  </div>
+  <div class="container-sign-up">
+    <div class="title-footer-general">
+      <p>Have an account? <span routerLink="/login">Login</span></p>
+    </div>
+  </div>
 </ion-content>
