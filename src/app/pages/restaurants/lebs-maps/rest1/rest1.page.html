@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color='grub'>
       <ion-title>
-          Ionic Shopping
+          Lebs Maps
       </ion-title>
       <ion-buttons slot="end">
           <ion-button (click)="openCart()">
@@ -15,13 +15,13 @@
 <ion-content>
   <div *ngFor="let cat of items" class="category-block">
       <ion-row no-padding class="category-banner">
-          <ion-col text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
+          <ion-col class="cat_highlight" text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
               {{ cat.category }}
           </ion-col>
       </ion-row>
 
-      <ion-slides [options]="sliderConfig">
-          <ion-slide *ngFor="let product of cat.products">
+      <ion-slides [options]="sliderConfig" pager="true" [options]="slideOpts">
+          <ion-slide *ngFor="let product of cat.products; let i = index">
               <div *ngIf="cat.expanded">
                   <ion-card>
                       <ion-card-header>
@@ -29,7 +29,8 @@
                               {{ product.name }} - ${{ product.price }}
                           </ion-card-title>
                           <ion-card-content>
-                              <img src="https://via.placeholder.com/300x300">
+                              <!-- <img src="https://via.placeholder.com/300x300"> -->
+                              <img class="img" src="{{ product.imge }}" (click)="clickedImage()">
                               <ion-button expand="full" (click)="addToCart(product)">Add to Cart</ion-button>
                           </ion-card-content>
                       </ion-card-header>

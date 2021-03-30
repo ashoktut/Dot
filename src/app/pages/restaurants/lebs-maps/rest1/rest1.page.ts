@@ -10,6 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class Rest1Page implements OnInit {
   cart = [];
   items = [];
+  flipped = false;
 
   sliderConfig = {
     slidesPerView: 1.6,
@@ -30,6 +31,10 @@ export class Rest1Page implements OnInit {
   }
 
   openCart() {
+    this.router.navigate(['cart']);
+  }
+
+  clickedImage(){
     this.router.navigate(['cart']);
   }
 }

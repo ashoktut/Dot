@@ -7,28 +7,44 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private data = [
     {
-      category: 'Pizza',
+      category: 'Chicken Dishes',
       expanded: true,
       products: [
-        { id: 0, name: 'Salami', price: '8' },
-        { id: 1, name: 'Classic', price: '5' },
-        { id: 2, name: 'Tuna', price: '9' },
-        { id: 3, name: 'Hawai', price: '7' }
+        { id: 0, name: 'Chicken feet & Pap', price: '25', imge: '../../assets/images/tile 1.jpg' },
+        { id: 1, name: 'Chicken livers & Pap', price: '25', imge: '../../assets/images/tile 2.jpg' },
+        { id: 2, name: 'Chicken Burger & Chips', price: '35', imge: '../../assets/images/tile 3.jpg' },
+        { id: 3, name: 'Chicken Wrap & Chips', price: '35', imge: '../../assets/images/tile 4.jpg' },
+        { id: 4, name: 'Rice + Chicken stew + 2 Salads', price: '35', imge: '../../assets/images/tile 5.jpg' },
+        { id: 5, name: 'Samp + Chicken stew + 2 Salads', price: '35', imge: '../../assets/images/tile 6.jpg' },
+        { id: 6, name: 'Pap + Chicken stew + 2 Salads', price: '35', imge: '../../assets/images/tile 1.jpg' },
+        { id: 7, name: 'Chicken Wings & Chips', price: '35', imge: '../../assets/images/tile 2.jpg' }
       ]
     },
     {
-      category: 'Pasta',
+      category: 'Beef Dishes',
       products: [
-        { id: 4, name: 'Mac & Cheese', price: '8' },
-        { id: 5, name: 'Bolognese', price: '6' }
+        { id: 8, name: 'Rice + Beef stew + 2 Salads', price: '40', imge: '../../assets/images/tile 2.jpg' },
+        { id: 9, name: 'Samp + Beef stew + 2 Salads', price: '40', imge: '../../assets/images/tile 3.jpg' },
+        { id: 10, name: 'Pap + Beef stew + 2 Salads', price: '40', imge: '../../assets/images/tile 4.jpg' },
+        { id: 11, name: 'Beef Wrap & Chips', price: '35', imge: '../../assets/images/tile 5.jpg' },
+        { id: 12, name: 'Ribs & Chips', price: '35', imge: '../../assets/images/tile 6.jpg' },
+        { id: 13, name: 'Vienna Twist Roll', price: '15', imge: '../../assets/images/tile 1.jpg' },
       ]
     },
     {
-      category: 'Salad',
+      category: 'Vegetarian Dishes',
       products: [
-        { id: 6, name: 'Ham & Egg', price: '8' },
-        { id: 7, name: 'Basic', price: '5' },
-        { id: 8, name: 'Ceaser', price: '9' }
+        { id: 14, name: 'Rice + Stew + 2 Salads', price: '35', imge: '../../assets/images/tile 2.jpg' }
+      ]
+    },
+    {
+      category: 'Bakery & Desserts',
+      products: [
+        { id: 15, name: '5L Scones (excl container)', price: '100', imge: '../../assets/images/tile 3.jpg' },
+        { id: 16, name: '10L Scones (excl container)', price: '180', imge: '../../assets/images/tile 4.jpg' },
+        { id: 17, name: '20L Scones (excl container)', price: '380', imge: '../../assets/images/tile 5.jpg' },
+        { id: 18, name: '5L Jam Tarts (excl container)', price: '120', imge: '../../assets/images/tile 6.jpg' },
+        { id: 19, name: '10L Buns (excl container)', price: '150', imge: '../../assets/images/tile 1.jpg' },
       ]
     }
   ];
