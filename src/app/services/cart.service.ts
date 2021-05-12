@@ -1,10 +1,25 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  amount: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartService {
+
+  // public cart = [];
+  // public cartItemCount = new BehaviorSubject(0);
+
+  constructor() { }
+  // tslint:disable-next-line: member-ordering
   private data = [
     {
       category: 'Chicken Dishes',
@@ -49,12 +64,18 @@ export class CartService {
     }
   ];
 
+  // tslint:disable-next-line: member-ordering
   private cart = [];
-
-  // public cart = [];
-  // public cartItemCount = new BehaviorSubject(0);
-
-  constructor() { }
+  public cartItemCount = new BehaviorSubject(0);
+  removeProduct(product) {
+    throw new Error('Method not implemented.');
+  }
+  clearCart() {
+    throw new Error('Method not implemented.');
+  }
+  decreaseProduct(product) {
+    throw new Error('Method not implemented.');
+  }
 
   getProducts() {
     return this.data;
@@ -64,24 +85,24 @@ export class CartService {
     return this.cart;
   }
 
-  // getCartItemCount() {
-  //   return this.cartItemCount;
-  // }
+   getCartItemCount() {
+     return this.cartItemCount;
+   }
 
   addProduct(product) {
     this.cart.push(product);
-//     let added = false;
-//     for (const p of this.cart) {
-//       if (p.id === product.id) {
-//         p.amount += 1;
-//         added = true;
-//         break;
-//       }
-//     }
-//     if (!added) {
-//       this.cart.push(this.data);
-//     }
-//     this.cartItemCount.next(this.cartItemCount.value + 1);
+    let added = false;
+    for (const p of this.cart) {
+      if (p.id === product.id) {
+        p.amount += 1;
+        added = true;
+        break;
+       }
+     }
+    if (!added) {
+       this.cart.push(this.data);
+     }
+    this.cartItemCount.next(this.cartItemCount.value + 1);
 //     this.getCartItemCount();
 // }
 }}
