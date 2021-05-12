@@ -24,6 +24,10 @@ const routes: Routes = [
   },  {
     path: 'rest1',
     loadChildren: () => import('./pages/restaurants/lebs-maps/rest1/rest1.module').then( m => m.Rest1PageModule)
+  },
+  {
+    path: 'cart-modal',
+    loadChildren: () => import('./pages/cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
   }
 
 
